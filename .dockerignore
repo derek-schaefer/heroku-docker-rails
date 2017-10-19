@@ -1,0 +1,9 @@
+*.swp
+
+.git/
+
+log/
+tmp/
+public/assets/
+
+node_modules/
