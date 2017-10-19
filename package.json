@@ -1,0 +1,5 @@
+{
+  "name": "heroku-docker",
+  "private": true,
+  "dependencies": {}
+}
