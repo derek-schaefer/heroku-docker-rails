@@ -1,24 +1,37 @@
-# README
+# Heroku Docker Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Rails application is an experiment that explores Heroku's recently released Docker support.
 
-Things you may want to cover:
+## Dependencies
 
-* Ruby version
+* Heroku
+* Docker
+* Docker Compose
 
-* System dependencies
+## Development
 
-* Configuration
+Run the application locally:
 
-* Database creation
+```shell
+$ docker-compose up
+```
 
-* Database initialization
+Open it in your browser:
 
-* How to run the test suite
+```shell
+$ open http://localhost:3000
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Deployment
 
-* Deployment instructions
+Build and push the image:
 
-* ...
+```shell
+$ make push
+```
+
+Open it in your browser:
+
+```shell
+$ heroku open
+```
