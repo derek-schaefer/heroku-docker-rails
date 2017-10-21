@@ -16,6 +16,18 @@ Run the application locally:
 $ docker-compose up
 ```
 
+Migrate the database:
+
+```shell
+$ docker-compose run web bundle exec rails db:migrate
+```
+
+Run another command in a new container:
+
+```shell
+$ docker-compose run web bundle exec rails console
+```
+
 Open it in your browser:
 
 ```shell
@@ -36,10 +48,28 @@ Log in to the Container Registry:
 $ heroku container:login
 ```
 
+Create the application:
+
+```shell
+$ heroku create heroku-docker-rails
+```
+
+Create the database:
+
+```shell
+$ heroku addons:create heroku-postgresql:hobby-dev
+```
+
 Build and push the image:
 
 ```shell
 $ heroku container:push web
+```
+
+Migrate the database:
+
+```shell
+$ heroku run bundle exec rails db:migrate --type web
 ```
 
 Open it in your browser:
@@ -48,7 +78,7 @@ Open it in your browser:
 $ heroku open
 ```
 
-Run a command in a new container:
+Run another command in a new container:
 
 ```shell
 $ heroku run bundle exec rails console --type web
